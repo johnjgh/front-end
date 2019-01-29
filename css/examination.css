@@ -99,26 +99,31 @@ a:link{
     justify-content: space-around; 
 }
 
-.dongtailan{
+.dabiaoti{
     width: 90%;
     left: 5.1%;
     position: relative;
 }
 
-.dongtai{
+.biaotizi{
     display: flex;
     height: 90px;
     align-items: center;
 }
 
-.xinwen{
-    display: flex; 
+.tip{
+    font-family:微软雅黑;
+    font-size:30px;
+    font-weight:bold;
+    position: relative;
+    left: 30px;
 }
 
-.xinwentu{
-    width: 35%;
-    height: 100%;
+.xinwen{
+    display: flex; 
+    padding-bottom: 30px;
 }
+
 
 .biaotilan{
     position: relative;
@@ -139,13 +144,64 @@ a:link{
 }
 
 .zixun{
-    height: 45px;
-    position: relative;
-    top: 30px;
+    height: 60px;
     background-color: #DDDDDD;
     align-items: center;
     font-family: 微软雅黑;
     display: flex;
     justify-content: center;
     font-size: 28px;
+}
+
+ul{
+    list-style: none;
+}
+
+#container{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;/*隐藏溢出的图片*/
+}
+.pic{
+    width:1200px;
+    position: absolute;/*基于父容器进行定位*/
+    left:0;
+    animation-name: focusmap;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+
+}
+ @keyframes focusmap {
+    0%,10%{
+        left: 0;
+    }
+    15%,25%{
+        left: -200px;
+    }
+    30%,35%{
+        left: -400px;
+    }
+    40%,50%{
+        left: -600px;
+    }
+    55%,70%{
+        left: -800px;
+    }
+    75%,85%{
+        left: -1000px;
+    }
+    100%{
+        left: -1200px;
+    }
+   
+}
+.pic li{
+    float: left;
+    background: #5dd94e;
+}
+
+.pic li img {
+    width: 200px;
+    height: 200px;
 }
